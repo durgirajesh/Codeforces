@@ -1,17 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 
-void out(vector<string> arr){
-	for(long long i=0; i<arr.size(); i++){
-		cout << arr[i] << endl;
+void result(vector<string> arr){
+	for(ll i=0; i<arr.size(); i++){
+		cout << arr[i] ;
+	}
+}
+
+void out(vector<ll> arr){
+	for(ll i=0; i<arr.size(); i++){
+		cout << arr[i] ;
 	}
 }
 
 int main(){
-	long long t; cin >> t;
-	while(t--){
-		
-	}
+	ll t; cin >> t;
+	
 	return 0;
 }
 
