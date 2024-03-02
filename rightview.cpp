@@ -16,9 +16,6 @@ struct TreeNode{
     TreeNode *right = nullptr;
 };
 
-vector<int> trav(TreeNode* root);
-
-
 vector<int> trav(TreeNode* root){
     if(!root){
         return {};

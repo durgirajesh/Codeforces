@@ -1,9 +1,6 @@
 class Solution {
 public:
     TreeNode* build(vector<int> pre, vector<int> in, int e){
-        if(in.empty() || pre.empty()){
-            return nullptr;
-        }
         TreeNode* root = new TreeNode(e);
 
         vector<int> :: iterator it;
@@ -14,7 +11,7 @@ public:
         if(x < in.size()){
             leftin = vector<int> (in.begin(), in.begin() + x);
         }
-        if(x + 1 < pre.size()){
+        if(x + 1 < in.size()){
             rightin = vector<int> (in.begin() + x + 1, in.end()); 
         }
 
