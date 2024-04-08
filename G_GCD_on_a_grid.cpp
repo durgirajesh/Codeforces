@@ -2,13 +2,9 @@
 using namespace std;
 typedef long long ll;
 
-int gcd_(int a, int b) {
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
+int gcd(int a, int b) {
+  if (b == 0) return a;
+  return gcd(b, a % b);
 }
 
 int gcd_grid(vector<vector<int>> grid, vector<vector<int>> &dp, int i, int j){
@@ -27,7 +23,8 @@ int gcd_grid(vector<vector<int>> grid, vector<vector<int>> &dp, int i, int j){
     int right = gcd_grid(grid, dp, i, j+1);
     int down = gcd_grid(grid, dp, i+1, j);
 
-    dp[i][j] = max(gcd_(grid[i][j], right), gcd_(grid[i][j], down));
+    int maxi = max(right, down);
+    dp[i][j] = gcd(grid[i][j], maxi);
     return dp[i][j];
 }
 
