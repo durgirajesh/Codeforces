@@ -1,6 +1,6 @@
 
 def solve(s, i, v) :
-    
+    pass
 
 def main() :
     t = int(input())
@@ -12,7 +12,5 @@ def main() :
         while q :
             q -= 1
             i, v = list(map(int, input().split()))
-            
-            s = new_s
 
 main() 
